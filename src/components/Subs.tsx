@@ -19,7 +19,14 @@ function Subs() {
           className="input"
         />
         <div className="flex max-sm:justify-end items-center max-sm:w-full">
-          <Button label="Sign up" fullwidth iconURL="/mail.png" />
+          <Button
+            label="Sign up"
+            fullwidth
+            iconURL="/mail.png"
+            backgroundColor=""
+            borderColor=""
+            textColor=""
+          />
         </div>
       </div>
     </div>

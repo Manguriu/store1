@@ -22,7 +22,7 @@ function Footer() {
             {socialMedia.map((icon) => (
               <div className="flex justify-center items-center w-12 h-12  bg-white rounded-full">
                 <img
-                  src="/icons/twitter.svg"
+                  src={icon.src}
                   alt={icon.alt}
                   width={24}
                   height={24}

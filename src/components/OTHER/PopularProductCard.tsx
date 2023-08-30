@@ -1,14 +1,17 @@
 import React from "react";
-import { star } from "../../../public/icons";
 
-function PopularProductCard({ name, price }) {
+function PopularProductCard({
+  name,
+  price,
+  imgURL,
+}: {
+  name: any;
+  price: any;
+  imgURL: any;
+}) {
   return (
     <div className="flex flex-1 flex-col w-full max-sm:w-full">
-      <img
-        src="http://localhost:3000/big-shoe1.png"
-        alt={name}
-        className="w-[280px] h-[280px]"
-      />
+      <img src={imgURL} alt={name} className="w-[280px] h-[280px]" />
       <div className="mt-8 flex justify-start gap-2.5">
         <img
           src="https://img.freepik.com/premium-vector/star-icon-golden-sign-vector-illustration-object_547150-368.jpg?w=826"

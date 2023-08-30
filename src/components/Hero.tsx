@@ -1,9 +1,14 @@
+"use client";
 import React, { useState } from "react";
 import Button from "./OTHER/Button";
 import { statistics, shoes } from "@/constants";
-// import ShoeCard from "./OTHER/ShoeCard";
+import ShoeCard from "./OTHER/ShoeCard";
+import bigshoe1 from "../../public/images/bigshoe1.png";
+import { StaticImageData } from "next/image";
 
 function Hero() {
+  const [bigShoeImg, setBigShoeImg] = useState(bigshoe1);
+
   return (
     <section
       id="home"
@@ -13,17 +18,24 @@ function Hero() {
         <p className="text-xl font-palanquin text-cyan-600">
           Some new Collections
         </p>
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
+        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[62px] max-sm:leading-[72px] font-bold">
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10  ">
-            The new arrivals
+            The new arrival
           </span>{" "}
           <br />
-          <span className="text-cyan-600 inline-block mt-3">NIke</span> Shoes
+          <span className="text-cyan-600 inline-block mt-3">NIke</span> Shoe
         </h1>
         <p className=" font-montserrat text-slate-400 text-lg mt-6 mb-14 leading-8 sm:max-w-sm">
           Discover new things
         </p>
-        <Button label="Shop now" iconURL="/Aright.png" />
+        <Button
+          label="Shop now"
+          iconURL="/icons/arrow-right.svg"
+          backgroundColor=""
+          borderColor=""
+          fullwidth={false}
+          textColor=""
+        />
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((stat) => (
             <div key={stat.label}>
@@ -37,25 +49,27 @@ function Hero() {
           ))}
         </div>
       </div>
-      <div className="relative flex justify-center items-center flex-1 xl:min-h-screen max-xl:py-40">
+      <div className="relative flex justify-center items-center flex-1 xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
         <img
-          src="/big-shoe1.png"
+          src={`${bigShoeImg}`}
           alt=""
           width={600}
           height={500}
           className="object-contain z-10 relative"
         />
-        {/* <div>
+        <div className=" flex sm:gap-6 absolute -bottom-[9%] sm:left-[10%] max-sm:px-6">
           {shoes.map((shoe, index) => (
             <div key={index}>
               <ShoeCard
                 imgURL={shoe}
-                changeBigShoeImage={() => {}}
-                bigShoeImg=""
+                changeBigShoeImage={(
+                  shoe: React.SetStateAction<StaticImageData>
+                ) => setBigShoeImg(shoe)}
+                bigShoeImg={bigShoeImg}
               />
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );

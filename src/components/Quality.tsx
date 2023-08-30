@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./OTHER/Button";
 import shoe34 from "../../public/shoe34.png";
+import { fork } from "child_process";
 
 function Quality() {
   return (
@@ -30,12 +31,19 @@ function Quality() {
           accurate based on your project structure.
         </p>
         <div className="mt-10">
-          <Button label="Explore Details" iconURL="" />
+          <Button
+            label="Explore Details"
+            iconURL=""
+            backgroundColor=""
+            borderColor=""
+            fullwidth={false}
+            textColor=""
+          />
         </div>
       </div>
       <div className="flex-1 flex justify-center items-center">
         <img
-          src="/shoe34.png"
+          src="/images/shoe8.svg"
           width={570}
           height={522}
           className="object-contain"

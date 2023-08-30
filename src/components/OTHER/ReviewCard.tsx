@@ -1,10 +1,20 @@
 import React from "react";
 
-function ReviewCard({ imgURL, customerName, rating, feedback }) {
+function ReviewCard({
+  imgURL,
+  customerName,
+  rating,
+  feedback,
+}: {
+  imgURL: any;
+  customerName: any;
+  rating: any;
+  feedback: any;
+}) {
   return (
     <div className="flex justify-center items-center flex-col">
       <img
-        src="/images/customer1.jpeg"
+        src={imgURL}
         className="rounded-full object-cover w-[120px] h-[120px]"
       />
       <p className="mt-6 mx-w-sm text-center info-text">{feedback}</p>

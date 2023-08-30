@@ -35,6 +35,7 @@ function Offers() {
             backgroundColor=""
             textColor=""
             borderColor=""
+            fullwidth={false}
           />
           <Button
             label="Learn More"
@@ -42,6 +43,7 @@ function Offers() {
             backgroundColor="bg-white"
             borderColor="border-slate-400"
             textColor="text-black"
+            fullwidth={false}
           />
         </div>
       </div>
