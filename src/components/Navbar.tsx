@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
 
@@ -16,7 +17,12 @@ function Navbar() {
     <header className=" padding-x py-8 absolute z-10 w-full">
       <nav className=" flex justify-between items-center max-container">
         <a href="/">
-          <Image src="" alt="" width={130} height={10} />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0034/8759/6579/files/Black_large_logo.png?height=628&pad_color=fff&v=1614328540&width=1200"
+            alt=""
+            width={130}
+            height={10}
+          />
         </a>
         <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
           {navLinks.map((item) => (

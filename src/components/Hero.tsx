@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
@@ -51,13 +52,15 @@ function Hero() {
         </div>
       </div>
       <div className="relative flex justify-center items-center flex-1 xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
-        <img
-          src={`${bigShoeImg}`}
-          alt=""
-          width={600}
-          height={500}
-          className="object-contain z-10 relative"
-        />
+        {
+          <img
+            src={`${bigShoeImg}`}
+            alt=""
+            width={600}
+            height={500}
+            className="object-contain z-10 relative"
+          />
+        }
         <div className=" flex sm:gap-6 absolute -bottom-[9%] sm:left-[10%] max-sm:px-6">
           {shoes.map((shoe, index) => (
             <div key={index}>
