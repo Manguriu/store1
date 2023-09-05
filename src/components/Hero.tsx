@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
 import Button from "./OTHER/Button";
@@ -5,7 +6,7 @@ import { statistics, shoes } from "@/constants";
 import ShoeCard from "./OTHER/ShoeCard";
 import bigshoe1 from "../../public/images/bigshoe1.png";
 import { StaticImageData } from "next/image";
-
+// import { bigShoe1 } from "../../public/images";
 function Hero() {
   const [bigShoeImg, setBigShoeImg] = useState(bigshoe1);
 
@@ -30,7 +31,7 @@ function Hero() {
         </p>
         <Button
           label="Shop now"
-          iconURL="/icons/arrow-right.svg"
+          iconURL=""
           backgroundColor=""
           borderColor=""
           fullwidth={false}

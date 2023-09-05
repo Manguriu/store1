@@ -22,7 +22,7 @@ function Subs() {
           <Button
             label="Sign up"
             fullwidth
-            iconURL="/mail.png"
+            iconURL=""
             backgroundColor=""
             borderColor=""
             textColor=""

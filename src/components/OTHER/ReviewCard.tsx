@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Image from "next/image";
 
 function ReviewCard({
   imgURL,
@@ -13,13 +15,17 @@ function ReviewCard({
 }) {
   return (
     <div className="flex justify-center items-center flex-col">
-      <img
+      <Image
+        alt=""
         src={imgURL}
         className="rounded-full object-cover w-[120px] h-[120px]"
+        width={120}
+        height={120}
       />
       <p className="mt-6 mx-w-sm text-center info-text">{feedback}</p>
       <div className="mt-3 flex justify-center items-center gap-2.5">
         <img
+          alt=""
           src="https://img.freepik.com/premium-vector/star-icon-golden-sign-vector-illustration-object_547150-368.jpg?w=826"
           width={24}
           height={24}

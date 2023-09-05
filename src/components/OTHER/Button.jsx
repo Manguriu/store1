@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Image from "next/image";
 
 const Button = ({
   label,
@@ -20,7 +22,11 @@ const Button = ({
     >
       {label}
       {iconURL && (
-        <img src={iconURL} className=" ml-2 rounded-full w-5 h-5 bg-white" />
+        <img
+          alt=""
+          src={iconURL}
+          className=" ml-2 rounded-full w-5 h-5 bg-cyan-500"
+        />
       )}
     </button>
   );

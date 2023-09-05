@@ -62,7 +62,7 @@ export const services = [
       "Experience worry-free transactions with our secure payment options.",
   },
   {
-    imgURL: "icons/support.svg",
+    imgURL: "/icons/support.svg",
     label: "Love to help you",
     subtext: "Our dedicated team is here to assist you every step of the way.",
   },
@@ -117,7 +117,7 @@ export const footerLinks = [
 ];
 
 export const socialMedia = [
-  { src: "/icons/facebook.svg", alt: "facebook logo" },
-  { src: "icons/twitter.svg", alt: "twitter logo" },
-  { src: "icons/instagram.svg", alt: "instagram logo" },
+  { src: "/icons/facebook.svg", alt: "facebook logo", id: 1 },
+  { src: "/icons/twitter.svg", alt: "twitter logo", id: 2 },
+  { src: "/icons/instagram.svg", alt: "instagram logo", id: 3 },
 ];

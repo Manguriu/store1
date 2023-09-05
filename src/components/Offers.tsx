@@ -1,15 +1,17 @@
 import React from "react";
 import Button from "./OTHER/Button";
+import Image from "next/image";
 
 function Offers() {
   return (
     <section className="flex justify-wrap items-center max-xl:flex-col-reverse gap-10 max-container">
       <div className="flex-1">
-        <img
+        <Image
           src="/images/offer.svg"
           width={773}
           height={687}
           className="object-contain w-full"
+          alt=""
         />
       </div>
 
