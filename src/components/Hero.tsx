@@ -5,17 +5,16 @@ import React, { useState } from "react";
 import Button from "./OTHER/Button";
 import { statistics, shoes } from "@/constants";
 import ShoeCard from "./OTHER/ShoeCard";
-import bigshoe1 from "../../public/images/bigshoe1.png";
 import { StaticImageData } from "next/image";
-// import { bigShoe1 } from "../../public/images";
+
 function Hero() {
+  const bigshoe1 = "/images/bigshoe1.png";
   const [bigShoeImg, setBigShoeImg] = useState(bigshoe1);
 
   return (
     <section
       id="home"
-      className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container  p-1"
-    >
+      className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container  p-1">
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p className="text-xl font-palanquin text-cyan-600">
           Some new Collections
@@ -68,7 +67,7 @@ function Hero() {
                 imgURL={shoe}
                 changeBigShoeImage={(
                   shoe: React.SetStateAction<StaticImageData>
-                ) => setBigShoeImg(shoe)}
+                ) => setBigShoeImg(`${shoe}`)}
                 bigShoeImg={bigShoeImg}
               />
             </div>
